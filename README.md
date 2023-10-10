@@ -1,8 +1,8 @@
 # Secure service
-* Stateless
-* Stateful
+* Stateless token
+* Stateful token
 
-## Start services
+## Demo with Stateless Token
 
 
 ### Start Auth service
