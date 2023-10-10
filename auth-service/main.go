@@ -29,6 +29,8 @@ func Index(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("Failed to generate token")
 	}
 
+	// For statful => store token in database
+
 	fmt.Fprintf(w, string(validToken))
 }
 

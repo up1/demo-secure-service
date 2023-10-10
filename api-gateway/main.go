@@ -43,7 +43,7 @@ func isAuthorized(endpoint func(http.ResponseWriter, *http.Request)) http.Handle
 				if !checkIss {
 					return nil, fmt.Errorf(("invalid iss"))
 				}
-
+				// For stateful => try to check data from database
 				return MySigningKey, nil
 			})
 			if err != nil {

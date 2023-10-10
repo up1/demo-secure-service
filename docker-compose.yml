@@ -1,0 +1,21 @@
+version: "3"
+services:
+  auth:
+    build:
+      context: ./auth-service
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    environment:
+      - SECRET_KEY=demo
+      
+  gateway:
+    build:
+      context: ./api-gateway
+      dockerfile: Dockerfile
+    ports:
+      - 9000:9000
+    environment:
+      - SECRET_KEY=demo
+
+    
